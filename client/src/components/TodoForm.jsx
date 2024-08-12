@@ -11,7 +11,8 @@ const TodoForm = () => {
 
     const handleSubmin =(e)=>{
         e.preventDefault();
-        dispatch(addNewTodo());
+        dispatch(addNewTodo(text));
+        setText("")
     }
     const onInputChange =(e)=>{
         console.log(e.target.value)
@@ -24,6 +25,7 @@ const TodoForm = () => {
             placeholder='Enter a new todo' 
             className='input'
             onChange={onInputChange}
+            value={text}
         />
     </form>
     </>
